@@ -92,6 +92,9 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+"), desc="Increase volume"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"), desc="Decrease volume"),
     Key([], "XF86AudioMute", lazy.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), desc="Mute/Unmute"),
+    # Brightness control
+    Key([], "F12", lazy.spawn("backlight + 10"), desc="Increase brightness"),
+    Key([], "F11", lazy.spawn("backlight - 10"), desc="Decrease brightness"),
     # Take Screenshot
     Key([], "Print", lazy.spawn("gnome-screenshot -i")),
 ]
