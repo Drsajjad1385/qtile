@@ -89,9 +89,9 @@ keys = [
     Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl set +10%"), desc="Increase brightness"),
     Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl set 10%-"), desc="Decrease brightness"),
     # Volume controls
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%+"), desc="Increase volume"),
-    Key([], "XF86AudioLowerVolume", lazy.spawn("wpctl set-volume @DEFAULT_AUDIO_SINK@ 10%-"), desc="Decrease volume"),
-    Key([], "XF86AudioMute", lazy.spawn("wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"), desc="Mute/Unmute"),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("mixer vol=+0.05"), desc="Increase volume"),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("mixer vol=-0.05"), desc="Decrease volume"),
+    Key([], "XF86AudioMute", lazy.spawn("mixer vol.mute=toggle"), desc="Mute/Unmute"),
     # Brightness control
     Key([], "F12", lazy.spawn("backlight + 10"), desc="Increase brightness"),
     Key([], "F11", lazy.spawn("backlight - 10"), desc="Decrease brightness"),
