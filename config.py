@@ -31,10 +31,6 @@ from libqtile.utils import guess_terminal
 import subprocess
 import os
 
-@hook.subscribe.startup_once
-def autostart():
-    subprocess.call([os.path.expanduser('~/.config/qtile/autostart.sh')])
-
 mod = "mod4"
 terminal = guess_terminal()
 
